@@ -4,7 +4,7 @@ from django.db import models
 class ParkingSpot(models.Model):
     latitude = models.CharField(max_length=20)
     longitude = models.CharField(max_length=20)
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50, blank=True)
     uuid = models.CharField(max_length=50, primary_key=True)
 
 class State(models.Model):
