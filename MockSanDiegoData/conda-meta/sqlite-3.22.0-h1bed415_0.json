@@ -1,0 +1,41 @@
+{
+  "arch": "x86_64",
+  "auth": null,
+  "build": "h1bed415_0",
+  "build_number": 0,
+  "channel": "https://repo.continuum.io/pkgs/main/linux-64",
+  "depends": [
+    "libedit",
+    "libgcc-ng >=7.2.0"
+  ],
+  "files": [
+    "bin/sqlite3",
+    "include/sqlite3.h",
+    "include/sqlite3ext.h",
+    "lib/libsqlite3.a",
+    "lib/libsqlite3.la",
+    "lib/libsqlite3.so",
+    "lib/libsqlite3.so.0",
+    "lib/libsqlite3.so.0.8.6",
+    "lib/pkgconfig/sqlite3.pc"
+  ],
+  "fn": "sqlite-3.22.0-h1bed415_0.tar.bz2",
+  "license": "Public-Domain (http://www.sqlite.org/copyright.html)",
+  "link": {
+    "source": "/home/lucas/anaconda3/pkgs/sqlite-3.22.0-h1bed415_0",
+    "type": 1
+  },
+  "md5": "5198a7d43090c167e83770e9a9b93b1e",
+  "name": "sqlite",
+  "noarch": null,
+  "platform": "linux",
+  "preferred_env": null,
+  "priority": 0,
+  "schannel": "defaults",
+  "size": 1582745,
+  "subdir": "linux-64",
+  "timestamp": 1517325921602,
+  "url": "https://repo.continuum.io/pkgs/main/linux-64/sqlite-3.22.0-h1bed415_0.tar.bz2",
+  "version": "3.22.0",
+  "with_features_depends": {}
+}
