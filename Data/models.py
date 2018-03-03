@@ -8,6 +8,7 @@ class ParkingSpot(models.Model):
     uuid = models.CharField(max_length=50, primary_key=True)
 
 class State(models.Model):
-    timestamp = models.DateTimeField()
+    time_in = models.DateTimeField()
+    time_out = models.DateTimeField()
     occupied = models.BooleanField()
     parking_spot = models.ForeignKey(ParkingSpot, on_delete=models.CASCADE)
