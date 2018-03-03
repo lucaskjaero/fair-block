@@ -2,8 +2,8 @@ from django.db import models
 
 # Create your models here.
 class ParkingSpot(models.Model):
-    latitude = models.CharField(max_length=10)
-    longitude = models.CharField(max_length=10)
+    latitude = models.CharField(max_length=20)
+    longitude = models.CharField(max_length=20)
     name = models.CharField(max_length=50)
     uuid = models.CharField(max_length=50, primary_key=True)
 
