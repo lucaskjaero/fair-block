@@ -5,7 +5,7 @@ class ParkingSpot(models.Model):
     latitude = models.CharField(max_length=10)
     longitude = models.CharField(max_length=10)
     name = models.CharField(max_length=50)
-    uuid = models.CharField(max_length=50)
+    uuid = models.CharField(max_length=50, primary_key=True)
 
 class State(models.Model):
     timestamp = models.DateTimeField()
