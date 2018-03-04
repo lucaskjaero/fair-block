@@ -20,8 +20,8 @@ from rest_framework import routers
 from Data.views import HistoryViewSet, ParkingSpotViewSet, StateViewSet, index
 
 router = routers.DefaultRouter()
-router.register(r'api/parkingspots', ParkingSpotViewSet)
-router.register(r'api/state', StateViewSet)
+router.register(r'parkingspots', ParkingSpotViewSet)
+router.register(r'state', StateViewSet)
 
 urlpatterns = [
     url(r'^$', index),
