@@ -104,15 +104,19 @@
           };
           for (var i = 0; i < redflags.length; i++) {
             var redflag = redflags[i];
-            var marker = new google.maps.Marker({
-              position: {lat: parseFloat(redflag.latitude), lng: parseFloat(redflag.longitude)},
-              map: map,
-              icon: redimage,
-              shape: shape,
-              title: redflag.name,
-              //zIndex: redflag[3]
-              //content: "HELLO"
-            });
+            $.ajax({
+              url: "https://fair-block.herokuapp.com/api/status/" + redflag.uuid
+            }).then(function(data) {
+              var marker = new google.maps.Marker({
+                position: {lat: parseFloat(redflag.latitude), lng: parseFloat(redflag.longitude)},
+                map: map,
+                icon: redimage,
+                shape: shape,
+                title: redflag.name + "\nTaken at" + data.time_in,
+                //zIndex: redflag[3]
+                //content: "HELLO"
+              });
+            }
           }
         });
 
