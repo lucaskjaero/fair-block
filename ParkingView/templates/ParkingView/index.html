@@ -108,8 +108,9 @@
               url: "https://fair-block.herokuapp.com/api/status/" + redflag.uuid
             }).then(function(data) {
               var state = data[0];
-              var time_taken = state.time_in.split("T")[0].replace("Z", "");
+              var time_taken = state.time_in.split("T")[1].replace("Z", "");
               console.log(time_taken);
+              var hour, minute, second = time_taken.split(":")
 
               var marker = new google.maps.Marker({
                 position: {lat: parseFloat(redflag.latitude), lng: parseFloat(redflag.longitude)},
