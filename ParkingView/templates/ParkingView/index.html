@@ -52,7 +52,7 @@
 
       function setMarkers(map) {
         $.ajax({
-          url: "https://blockchain-team-badass.herokuapp.com/api/empty/"
+          url: "https://fair-block.herokuapp.com/api/empty/"
         }).then(function(data) {
           greenflags = data;
 
@@ -81,7 +81,7 @@
         });
 
         $.ajax({
-          url: "https://blockchain-team-badass.herokuapp.com/api/full/"
+          url: "https://fair-block.herokuapp.com/api/full/"
         }).then(function(data) {
           redflags = data;
 
