@@ -57,7 +57,6 @@
         ['$2/hr   2/hr MAX', 32.721677, -117.168288],
         ['$2/hr   2/hr MAX', 32.715069, -117.139148]
       ];
-      console.log($);
 
       $.ajax({
         url: "https://blockchain-team-badass.herokuapp.com/api/empty/"
@@ -101,6 +100,7 @@
         };
         for (var i = 0; i < redflags.length; i++) {
           var redflag = redflags[i];
+          console.log("Adding " + redflag)
           var marker = new google.maps.Marker({
             position: {lat: parseFloat(redflag.latitude), lng: parseFloat(redflag.longitude)},
             map: map,
