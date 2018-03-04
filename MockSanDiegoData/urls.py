@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from django.urls import path
 from rest_framework import routers
-from Data.views import EmptyViewSet, FullViewSet, HistoryViewSet, ParkingSpotViewSet, StateViewSet
+from Data.views import EmptyViewSet, FullViewSet, HistoryViewSet, ParkingSpotViewSet, StatusViewSet, StateViewSet
 from ParkingView.views import index
 
 router = routers.DefaultRouter()
@@ -30,5 +30,6 @@ urlpatterns = [
     url(r'^$', index),
     url(r'^api/', include(router.urls)),
     url('^api/history/(?P<spot>.+)/$', HistoryViewSet.as_view({'get': 'list'})),
+    url('^api/status/(?P<spot>.+)/$', StatusViewSet.as_view({'get': 'list'})),
     path('admin/', admin.site.urls),
 ]

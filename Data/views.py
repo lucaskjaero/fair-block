@@ -32,6 +32,16 @@ class HistoryViewSet(viewsets.ModelViewSet):
         spot = self.kwargs['spot']
         return State.objects.filter(parking_spot=spot)
 
+class StatusViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    serializer_class = StateSerializer
+
+    def get_queryset(self):
+        spot = self.kwargs['spot']
+        return State.objects.filter(parking_spot=spot).latest("time_in")
+
 class EmptyViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
