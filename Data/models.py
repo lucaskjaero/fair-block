@@ -12,7 +12,7 @@ class ParkingSpot(models.Model):
     uuid = models.CharField(max_length=50, primary_key=True)
 
     def __str__(self):
-        return "%s - %s" % (name, uuid)
+        return "%s - %s" % (this.name, this.uuid)
 
 
 class State(models.Model):
