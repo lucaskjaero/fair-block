@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Complex icons</title>
+    <title>Open Parking SPaces</title>
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -82,7 +82,6 @@
           url: "https://blockchain-team-badass.herokuapp.com/api/full/"
         }).then(function(data) {
           redflags = data;
-          console.log(redflags);
 
           var redimage = {
             //url: 'https://developers.google.com/maps/documentation/javascript/examples/full/redimages/redflagflag.png',
@@ -103,7 +102,6 @@
           };
           for (var i = 0; i < redflags.length; i++) {
             var redflag = redflags[i];
-            console.log("Adding " + redflag)
             var marker = new google.maps.Marker({
               position: {lat: parseFloat(redflag.latitude), lng: parseFloat(redflag.longitude)},
               map: map,
