@@ -10,5 +10,5 @@ class ParkingSpot(models.Model):
 class State(models.Model):
     time_in = models.DateTimeField()
     time_out = models.DateTimeField()
-    occupied = models.BooleanField()
+    occupied_by = models.CharField(max_length=200)
     parking_spot = models.ForeignKey(ParkingSpot, on_delete=models.CASCADE)
