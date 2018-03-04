@@ -42,21 +42,6 @@
 
       // Data for the markers consisting of a name, a LatLng and a zIndex for the
       // order in which these markers should display on top of each other.
-      var redflags = [
-        ['$2/hr   2/hr MAX', 32.708389, -117.140822],
-        ['$2/hr   2/hr MAX', 32.708606, -117.140307],
-        ['$2/hr   2/hr MAX', 32.707739, -117.133913],
-        ['$2/hr   2/hr MAX', 32.698043, -117.172193],
-        ['$2/hr   2/hr MAX', 32.715748, -117.162074]
-      ];
-
-      var greenflags = [
-        ['$2/hr   2/hr MAX', 32.715755, -117.166442],
-        ['$2/hr   2/hr MAX', 32.711458, -117.171077],
-        ['$2/hr   2/hr MAX', 32.708461, -117.151894],
-        ['$2/hr   2/hr MAX', 32.721677, -117.168288],
-        ['$2/hr   2/hr MAX', 32.715069, -117.139148]
-      ];
 
       var shape = {
         coords: [1, 1, 1, 20, 18, 20, 18, 1],
@@ -97,6 +82,7 @@
           url: "https://blockchain-team-badass.herokuapp.com/api/full/"
         }).then(function(data) {
           redflags = data;
+          console.log(redflags);
 
           var redimage = {
             //url: 'https://developers.google.com/maps/documentation/javascript/examples/full/redimages/redflagflag.png',
