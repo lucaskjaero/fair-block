@@ -8,6 +8,10 @@ class ParkingSpot(models.Model):
     price = models.DecimalField(max_digits=5, decimal_places=2)
     max_hours = models.IntegerField()
 
+    start_enforcing = models.IntegerField()
+    stop_enforcing = models.IntegerField()
+    days_enforced = models.CharField(max_length=20)
+
     name = models.CharField(max_length=50, blank=True)
     uuid = models.CharField(max_length=50, primary_key=True)
 
