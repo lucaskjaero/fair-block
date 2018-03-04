@@ -102,7 +102,7 @@
         for (var i = 0; i < redflags.length; i++) {
           var redflag = redflags[i];
           var marker = new google.maps.Marker({
-            position: {lat: redflag.latitude, lng: redflag.longitude},
+            position: {lat: parseFloat(redflag.latitude), lng: parseFloat(redflag.longitude)},
             map: map,
             icon: redimage,
             shape: shape,
@@ -134,7 +134,7 @@
         for (var i = 0; i < greenflags.length; i++) {
           var greenflag = greenflags[i];
           var marker = new google.maps.Marker({
-            position: {lat: greenflag.latitude, lng: greenflag.longitude},
+            position: {lat: parseFloat(greenflag.latitude), lng: parseFloat(greenflag.longitude)},
             map: map,
             icon: greenimage,
             shape: shape,
