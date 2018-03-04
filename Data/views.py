@@ -37,11 +37,11 @@ class EmptyViewSet(viewsets.ModelViewSet):
     API endpoint that allows users to be viewed or edited.
     """
     serializer_class = ParkingSpotSerializer
-    queryset = ParkingSpot.objects.filter(state__time_out__isnull=True)
+    queryset = ParkingSpot.objects.filter(state__time_out__isnull=False)
 
 class FullViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
     serializer_class = ParkingSpotSerializer
-    queryset = ParkingSpot.objects.filter(state__time_out__isnull=False)
+    queryset = ParkingSpot.objects.filter(state__time_out__isnull=True)
