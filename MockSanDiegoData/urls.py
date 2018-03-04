@@ -28,7 +28,7 @@ router.register(r'state', StateViewSet)
 
 urlpatterns = [
     url(r'^$', index),
-    url(r'^/gallery$', gallery),
+    url(r'^gallery$', gallery),
     url(r'^api/', include(router.urls)),
     url('^api/history/(?P<spot>.+)/$', HistoryViewSet.as_view({'get': 'list'})),
     url('^api/status/(?P<spot>.+)/$', StatusViewSet.as_view({'get': 'list'})),
