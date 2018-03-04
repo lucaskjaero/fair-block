@@ -11,6 +11,9 @@ class ParkingSpot(models.Model):
     name = models.CharField(max_length=50, blank=True)
     uuid = models.CharField(max_length=50, primary_key=True)
 
+    def __str__(self):
+        return "%s - %s" % (name, uuid)
+
 
 class State(models.Model):
     time_in = models.DateTimeField()
