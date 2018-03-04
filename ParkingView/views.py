@@ -7,3 +7,8 @@ def index(request):
     template = loader.get_template('ParkingView/index.html')
     context = {}
     return HttpResponse(template.render(context, request))
+
+def gallery(request):
+    template = loader.get_template('ParkingView/gallery.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
