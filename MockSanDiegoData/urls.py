@@ -27,6 +27,6 @@ router.register(r'state', StateViewSet)
 urlpatterns = [
     url(r'^$', index),
     url(r'^api/', include(router.urls)),
-    url('^history/(?P<spot>.+)/$', HistoryViewSet.as_view({'get': 'list'})),
+    url('^api/history/(?P<spot>.+)/$', HistoryViewSet.as_view({'get': 'list'})),
     path('admin/', admin.site.urls),
 ]
