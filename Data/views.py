@@ -31,3 +31,17 @@ class HistoryViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         spot = self.kwargs['spot']
         return State.objects.filter(parking_spot=spot)
+
+class EmptyViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    serializer_class = ParkingSpotSerializer
+    queryset = ParkingSpot.objects.filter(state__time_out__isnull=True)
+
+class FullViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    serializer_class = ParkingSpotSerializer
+    queryset = ParkingSpot.objects.filter(state__time_out__isnull=False)
