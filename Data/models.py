@@ -6,7 +6,7 @@ class ParkingSpot(models.Model):
     longitude = models.CharField(max_length=20)
 
     price = models.DecimalField(max_digits=5, decimal_places=2)
-    max_hours = models.IntegerField()
+    max_hours = models.CharField(max_length=20)
 
     start_enforcing = models.IntegerField()
     stop_enforcing = models.IntegerField()
