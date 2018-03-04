@@ -40,7 +40,7 @@ class StatusViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         spot = self.kwargs['spot']
-        return State.objects.filter(parking_spot=spot).latest("time_in")
+        return (State.objects.filter(parking_spot=spot).latest("time_in"),)
 
 class EmptyViewSet(viewsets.ModelViewSet):
     """
