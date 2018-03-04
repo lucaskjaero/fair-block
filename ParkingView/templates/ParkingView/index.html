@@ -107,13 +107,13 @@
             $.ajax({
               url: "https://fair-block.herokuapp.com/api/status/" + redflag.uuid
             }).then(function(data) {
-              console.log(data);
+              var state = data[0];
               var marker = new google.maps.Marker({
                 position: {lat: parseFloat(redflag.latitude), lng: parseFloat(redflag.longitude)},
                 map: map,
                 icon: redimage,
                 shape: shape,
-                title: redflag.name + "\nTaken at" + data.time_in,
+                title: redflag.name + "\nTaken at" + state.time_in,
                 //zIndex: redflag[3]
                 //content: "HELLO"
               });
