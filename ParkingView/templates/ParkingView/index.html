@@ -62,7 +62,13 @@
       $.ajax({
         url: "https://blockchain-team-badass.herokuapp.com/api/empty/"
       }).then(function(data) {
-        console.log(data);
+        greenflags = data;
+      });
+
+      $.ajax({
+        url: "https://blockchain-team-badass.herokuapp.com/api/full/"
+      }).then(function(data) {
+        redflags = data;
       });
 
 
@@ -96,12 +102,12 @@
         for (var i = 0; i < redflags.length; i++) {
           var redflag = redflags[i];
           var marker = new google.maps.Marker({
-            position: {lat: redflag[1], lng: redflag[2]},
+            position: {lat: redflag.latitude, lng: redflag.longitude},
             map: map,
             icon: redimage,
             shape: shape,
-            title: redflag[0],
-            zIndex: redflag[3]
+            title: redflag.name,
+            //zIndex: redflag[3]
             //content: "HELLO"
           });
         }
@@ -128,12 +134,12 @@
         for (var i = 0; i < greenflags.length; i++) {
           var greenflag = greenflags[i];
           var marker = new google.maps.Marker({
-            position: {lat: greenflag[1], lng: greenflag[2]},
+            position: {lat: greenflag.latitude, lng: greenflag.longitude},
             map: map,
             icon: greenimage,
             shape: shape,
-            title: greenflag[0],
-            zIndex: greenflag[3]
+            title: greenflag.name,
+            //zIndex: greenflag[3]
           });
         }
 
