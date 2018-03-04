@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.template import loader
+from django.http import HttpResponse
 
 # Create your views here.
 from rest_framework import viewsets
@@ -29,3 +31,8 @@ class HistoryViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         spot = self.kwargs['spot']
         return State.objects.filter(parking_spot=spot)
+
+def index(request):
+    template = loader.get_template('ParkingView/index.html')
+    context = {}
+    return HttpResponse(template.render(context, request))

@@ -17,14 +17,15 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from django.urls import path
 from rest_framework import routers
-from Data.views import HistoryViewSet, ParkingSpotViewSet, StateViewSet
+from Data.views import HistoryViewSet, ParkingSpotViewSet, StateViewSet, index
 
 router = routers.DefaultRouter()
-router.register(r'parkingspots', ParkingSpotViewSet)
-router.register(r'state', StateViewSet)
+router.register(r'api/parkingspots', ParkingSpotViewSet)
+router.register(r'api/state', StateViewSet)
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
+    url(r'^$', index),
+    url(r'^api/', include(router.urls)),
     url('^history/(?P<spot>.+)/$', HistoryViewSet.as_view({'get': 'list'})),
     path('admin/', admin.site.urls),
 ]
