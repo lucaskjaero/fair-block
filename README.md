@@ -1,9 +1,4 @@
-# Mock endpoint for parking spot data from the city of San Diego
+# FairBlock
+Fair parking powered by the blockchain. Concept site built to show what could be done with smart meters.
 
-## Endpoints:
-- [Spots](https://blockchain-team-badass.herokuapp.com/parkingspots/)
-- [History](https://blockchain-team-badass.herokuapp.com/state/)
-
-## Data
-- The data is in `raw_data.csv`
-- Get it into the database with `python populate_database.py`
+Designed as part of the Blockception hackathon by AJ (@ajanigyasi), Erika Ping (@akiregator), Lucas Kjaero (@lucaskjaero), Nick (@cifranix), and Oleg (@ovz).
