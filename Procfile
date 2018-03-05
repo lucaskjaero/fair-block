@@ -1,1 +1,1 @@
-web: gunicorn MockSanDiegoData.wsgi --log-file -
+web: gunicorn FairBlock.wsgi --log-file -
